@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FLASK_WEB</title>
+  <title>WEB_DEV</title>
 </head>
 <body>
   <div class="container" >
-<h1> Flask website </h1>
+<h1> website devloper </h1>
   <image  class="img-fluid" src="static/banner.jpeg.jpg" >
     <h2> About flask</h2>
     <P>
@@ -17,11 +17,29 @@
       Lightweight & Efficient: Flask boasts a streamlined design, resulting in low resource consumption and swift performance. This is ideal for projects where memory availability or execution speed are paramount.
       Highly Customizable: Unlike monolithic frameworks, Flask doesn't impose its own structure. You have complete control over the application's architecture, enabling you to create bespoke designs that align precisely with your vision.
     </P>
-    <h2> Open Source </h2>
-    <p> TODO - SHOW THE JOBS HERE </p>
-    <div>
-    <button> contact us </button>
+    <h2 class = "text-center mt-2 mb-4"> Open positions </h2>
+   <div>
+     {% for job in jobs  %}
+     <div class="border-bottom " style="margin-bottom:16px;padding-bottom:8px;">
+       <div class>
+   <h4 style="color:rgb(120,120,120)";margin-bottom4px;>
+     {{job['title']}}</h4>
+       <div>
+         <b>Location:</b> {{job['location']}}
+       </div>
+       <div>
+         <b>salary :</b> {{job['salary']}}
+       </div>
+       <button type="button" class="btn btn-outline-primary">Apply</button>
+     </div>
+     {% endfor %}
+   </div>
+    <div class="text-center">
+      </div>
+      <button class="btn btn-primary btn-lg"> Contact us </button>
+      <p class="mt-4"> Copyright 2023, sameer</p>
+    </div>
   </div>
-  </div>
+</div>
 </body>
 </html>
